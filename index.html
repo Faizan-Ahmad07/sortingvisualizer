@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualizer</title>
+    <link rel="stylesheet" href="style/sortv.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" type="image/x-icon" href="https://img.icons8.com/?size=100&id=qn2dSywXsveC&format=png&color=000000">
+</head>
+<body>
+    <nav>
+      <div class="left">
+        <div class="title">Sorting Visualizer</div>
+      </div>
+      <div class="right">
+        <div class="group algorithm">
+          <label for="algorithm">Algorithm</label>
+          <select name="algorithm" id="algorithm">
+            <optgroup label="Sorting:" id="sorting-list"></optgroup>
+          </select>
+        </div>
+        <div class="group animationSpeed">
+          <label for="animationSpeed">Speed</label>
+          <select name="animationSpeed" id="animationSpeed">
+            <option value="fast">Fast</option>
+            <option value="medium" selected>Medium</option>
+            <option value="slow">Slow</option>
+          </select>
+        </div>
+        <div class="group barsSize">
+          <label for="slider">Bars</label>
+          <input type="range" min="10" max="200" value="50" class="slider" id="slider">
+        </div>
+        <button class="sort-button accent">Sort<i class='bx bx-sort-up'></i></button>
+        <button class="reset-button">Reset<i class='bx bx-reset'></i></button>
+        <button class="stop-button danger" id="stopButton" title="Stop current sorting" style="display:none;">Stop<i class='bx bx-stop-circle'></i></button>
+        <button class="pseudoButton outline" id="pseudoButton">Pseudo Code</button>
+        <button class="theme-toggle outline" id="themeToggle" title="Toggle Dark Mode"><i class='bx bx-moon'></i></button>
+        <div class="pseudoCode">
+          <div class="pseudo-code-card" id="pseudoCodeCard">
+            <div class="top">
+              <h3></h3>
+              <button class="close-button" id="closeButton">X</button>
+            </div>
+            <pre id="pseudoCode"></pre>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+
+    </div>
+  <div class="info-box" >
+      <div class="info-heading" >
+          <span>Info</span>
+          <button id="infoToggle">▼</button>
+      </div>
+
+      <div class="info-content" >
+          <p id="algorithmName" >Algorithm: </p>
+          <p id="barCount">No. of Bars: </p>
+          <p id="comparisons">Comparisons: </p>
+      <p id="legend"></p>
+      </div>
+  </div>
+
+  <footer>
+    Faizan Ahmad
+  </footer>
+
+
+    <script type="module" src="script/sort.js"></script>
+</body>
+</html>
